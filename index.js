@@ -1,7 +1,7 @@
 // import Navigo from "navigo";
-import { getHeader } from "./components/header/header.js";
-import { getPageMain } from "./page/pageMain.js";
-import { getFooter } from "./components/footer/footer.js";
+import { getHeader } from "./src/components/header/header.js";
+import { getPageMain } from "./src/page/pageMain.js";
+import { getFooter } from "./src/components/footer/footer.js";
 
 
 const app = document.querySelector("#app");

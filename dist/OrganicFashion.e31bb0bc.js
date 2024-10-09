@@ -117,9 +117,362 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"index.js":[function(require,module,exports) {
+})({"src/img/image-1.png":[function(require,module,exports) {
+module.exports = "/image-1.75fea045.png";
+},{}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+  return bundleURL;
+}
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+  return '/';
+}
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+function updateLink(link) {
+  var newLink = link.cloneNode();
+  newLink.onload = function () {
+    link.remove();
+  };
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+var cssTimeout = null;
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+    cssTimeout = null;
+  }, 50);
+}
+module.exports = reloadCSS;
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/components/header/header.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/header/header.js":[function(require,module,exports) {
+"use strict";
 
-},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getHeader = getHeader;
+var _image = _interopRequireDefault(require("../../img/image-1.png"));
+require("./header.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+// import { router } from "../../index.js";
+
+var navigationArray = ["ALTANSCHOOL WEB COURSES", "HOME", "ABOUT", "SHOP", "BLOG", "CONTACT"];
+function getHeader() {
+  var header = document.createElement("header");
+  header.classList.add("header");
+  var container = document.createElement("div");
+  container.classList.add("container");
+  var nav = document.createElement("nav");
+  nav.classList.add("navigator");
+  var list = document.createElement("ul");
+  list.classList.add("list");
+  navigationArray.forEach(function (item) {
+    var items = document.createElement("li");
+    items.classList.add("items");
+    var link = document.createElement("a");
+    link.classList.add("link");
+    link.href = "/";
+    link.innerHTML = item;
+    list.appendChild(items);
+    items.appendChild(link);
+  });
+  var organicContent = document.createElement("div");
+  organicContent.classList.add("organic_content");
+  var img = document.createElement("img");
+  img.classList.add("organic_content-img");
+  img.src = _image.default;
+  img.alt = "Example image";
+  var organicBox = document.createElement("div");
+  organicBox.classList.add("organic_box");
+  var title = document.createElement("h1");
+  title.classList.add("organic_box-title");
+  title.textContent = "ORGANIC FASHION";
+  var text = document.createElement("p");
+  text.classList.add("organic_box-text");
+  text.textContent = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
+  var button = document.createElement("button");
+  button.classList.add("organic_box-btn");
+  button.textContent = "SHOP NOW";
+  header.append(container);
+  container.append(nav, organicContent);
+  nav.append(list);
+  organicContent.append(img, organicBox);
+  organicBox.append(title, text, button);
+  return header;
+}
+},{"../../img/image-1.png":"src/img/image-1.png","./header.css":"src/components/header/header.css"}],"src/components/categories/categories.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/img/categories/image-1.png":[function(require,module,exports) {
+module.exports = "/image-1.6c7b8715.png";
+},{}],"src/img/categories/image-2.png":[function(require,module,exports) {
+module.exports = "/image-2.1b30d680.png";
+},{}],"src/img/categories/image-3.png":[function(require,module,exports) {
+module.exports = "/image-3.3ecc05cc.png";
+},{}],"src/img/categories/image-4.png":[function(require,module,exports) {
+module.exports = "/image-4.19638b92.png";
+},{}],"src/img/categories/image-5.png":[function(require,module,exports) {
+module.exports = "/image-5.3f5bbde0.png";
+},{}],"src/components/categories/pageCategories.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getPageCategories = getPageCategories;
+require("./categories.css");
+var _image = _interopRequireDefault(require("../../img/categories/image-1.png"));
+var _image2 = _interopRequireDefault(require("../../img/categories/image-2.png"));
+var _image3 = _interopRequireDefault(require("../../img/categories/image-3.png"));
+var _image4 = _interopRequireDefault(require("../../img/categories/image-4.png"));
+var _image5 = _interopRequireDefault(require("../../img/categories/image-5.png"));
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+var categoriesArray = [_image.default, _image2.default, _image3.default, _image4.default];
+function getPageCategories() {
+  var section = document.createElement("section");
+  section.classList.add("section-categories");
+  var container = document.createElement("div");
+  container.classList.add("container");
+  var categories_shop = document.createElement("div");
+  categories_shop.classList.add("categories_shop");
+  var title = document.createElement("h2");
+  title.classList.add("categories-title", "titles");
+  title.textContent = "SHOP BY CATEGORIES";
+  var categories_shop_images = document.createElement("div");
+  categories_shop_images.classList.add("categories_shop-images");
+  var categories_images = document.createElement("div");
+  categories_images.classList.add("categories_images");
+  categoriesArray.forEach(function (item) {
+    var img = document.createElement("img");
+    img.classList.add("categories_images-img");
+    img.src = item;
+    img.alt = "Example image";
+    categories_images.appendChild(img);
+  });
+  var img = document.createElement("img");
+  img.classList.add("categories_shop-images-img");
+  img.src = _image5.default;
+  img.alt = "Example image";
+  section.append(container);
+  container.append(categories_shop);
+  categories_shop.append(title, categories_shop_images, categories_images);
+  categories_shop_images.append(categories_images, img);
+  return section;
+}
+},{"./categories.css":"src/components/categories/categories.css","../../img/categories/image-1.png":"src/img/categories/image-1.png","../../img/categories/image-2.png":"src/img/categories/image-2.png","../../img/categories/image-3.png":"src/img/categories/image-3.png","../../img/categories/image-4.png":"src/img/categories/image-4.png","../../img/categories/image-5.png":"src/img/categories/image-5.png"}],"src/components/collection/collection.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/img/collection/image-1.png":[function(require,module,exports) {
+module.exports = "/image-1.4ddedca7.png";
+},{}],"src/img/collection/image-2.png":[function(require,module,exports) {
+module.exports = "/image-2.e03b7fba.png";
+},{}],"src/img/collection/image-3.png":[function(require,module,exports) {
+module.exports = "/image-3.3d02050e.png";
+},{}],"src/components/collection/pageCollection.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getPageCollection = getPageCollection;
+require("./collection.css");
+var _image = _interopRequireDefault(require("../../img/collection/image-1.png"));
+var _image2 = _interopRequireDefault(require("../../img/collection/image-2.png"));
+var _image3 = _interopRequireDefault(require("../../img/collection/image-3.png"));
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+var collectionArray = [_image.default, _image2.default, _image3.default];
+function getPageCollection() {
+  var section = document.createElement("section");
+  section.classList.add("section-collection");
+  var container = document.createElement("div");
+  container.classList.add("container");
+  var title = document.createElement("h2");
+  title.classList.add("collection-title", "titles");
+  title.textContent = "NEW COLLECTION";
+  var collectionNew = document.createElement("div");
+  collectionNew.classList.add("collection_new");
+  collectionArray.forEach(function (item) {
+    var img = document.createElement("img");
+    img.classList.add("collection_new-img");
+    img.src = item;
+    img.alt = "Example image";
+    collectionNew.appendChild(img);
+  });
+  var text = document.createElement("p");
+  text.classList.add("collection_text");
+  text.textContent = "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+  section.append(container);
+  container.append(title, collectionNew, text);
+  return section;
+}
+},{"./collection.css":"src/components/collection/collection.css","../../img/collection/image-1.png":"src/img/collection/image-1.png","../../img/collection/image-2.png":"src/img/collection/image-2.png","../../img/collection/image-3.png":"src/img/collection/image-3.png"}],"src/components/about/about.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/img/about.png":[function(require,module,exports) {
+module.exports = "/about.09a40596.png";
+},{}],"src/components/about/pageAbout.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getPageAbout = getPageAbout;
+require("./about.css");
+var _about2 = _interopRequireDefault(require("../../img/about.png"));
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getPageAbout() {
+  var section = document.createElement("section");
+  section.classList.add("section-about");
+  var container = document.createElement("div");
+  container.classList.add("container");
+  var about_inner = document.createElement("div");
+  about_inner.classList.add("about-inner");
+  var img = document.createElement("img");
+  img.classList.add("about-img");
+  img.src = _about2.default;
+  img.alt = "Example image";
+  var aboutContent = document.createElement("div");
+  aboutContent.classList.add("about-content");
+  var title = document.createElement("h2");
+  title.classList.add("about-title", "titles");
+  title.textContent = "ABOUT US";
+  var text1 = document.createElement("p");
+  text1.classList.add("about-text", "text");
+  text1.textContent = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+  var text2 = document.createElement("p");
+  text2.classList.add("about-text");
+  text2.textContent = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
+  var button = document.createElement("button");
+  button.classList.add("about-btn");
+  button.textContent = "LEARN MORE";
+  section.append(container);
+  container.append(about_inner);
+  about_inner.append(img, aboutContent);
+  aboutContent.append(title, text1, text2, button);
+  return section;
+}
+},{"./about.css":"src/components/about/about.css","../../img/about.png":"src/img/about.png"}],"src/page/pageMain.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getPageMain = getPageMain;
+var _pageCategories = require("../components/categories/pageCategories.js");
+var _pageCollection = require("../components/collection/pageCollection.js");
+var _pageAbout = require("../components/about/pageAbout.js");
+function getPageMain() {
+  var main = document.createElement("main");
+  main.classList.add("main");
+  main.append((0, _pageCategories.getPageCategories)());
+  main.append((0, _pageCollection.getPageCollection)());
+  main.append((0, _pageAbout.getPageAbout)());
+  return main;
+}
+},{"../components/categories/pageCategories.js":"src/components/categories/pageCategories.js","../components/collection/pageCollection.js":"src/components/collection/pageCollection.js","../components/about/pageAbout.js":"src/components/about/pageAbout.js"}],"src/img/follow.png":[function(require,module,exports) {
+module.exports = "/follow.ae71f4fc.png";
+},{}],"src/components/footer/footer.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/footer/footer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getFooter = getFooter;
+var _follow = _interopRequireDefault(require("../../img/follow.png"));
+require("./footer.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getFooter() {
+  var footer = document.createElement("footer");
+  footer.classList.add("footer");
+  var container = document.createElement("div");
+  container.classList.add("container");
+  var follow_inner = document.createElement("div");
+  follow_inner.classList.add("follow-inner");
+  var follow_content = document.createElement("div");
+  follow_content.classList.add("follow-content");
+  var title = document.createElement("h2");
+  title.classList.add("follow-title", "titles");
+  title.textContent = "FOLLOW US";
+  var form = document.createElement("form");
+  form.classList.add("follow-form");
+  var nameInput = document.createElement("input");
+  nameInput.classList.add("name-input");
+  nameInput.placeholder = "Enter your name";
+  var emailAddressInput = document.createElement("input");
+  emailAddressInput.classList.add("email_address-input");
+  emailAddressInput.placeholder = "Enter a valid email address";
+  var textareaMessage = document.createElement("textarea");
+  textareaMessage.classList.add("message-input");
+  textareaMessage.placeholder = "Enter your message";
+  var button = document.createElement("button");
+  button.classList.add("follow-btn");
+  button.type = "submit";
+  button.textContent = "SUBMIT";
+  var img = document.createElement("img");
+  img.classList.add("follow-img");
+  img.src = _follow.default;
+  img.alt = "Example image";
+  footer.append(container);
+  container.append(follow_inner);
+  follow_inner.append(follow_content, img);
+  follow_content.append(title, form, button);
+  form.append(nameInput, emailAddressInput, textareaMessage);
+  return footer;
+}
+},{"../../img/follow.png":"src/img/follow.png","./footer.css":"src/components/footer/footer.css"}],"index.js":[function(require,module,exports) {
+"use strict";
+
+var _header = require("./src/components/header/header.js");
+var _pageMain = require("./src/page/pageMain.js");
+var _footer = require("./src/components/footer/footer.js");
+// import Navigo from "navigo";
+
+var app = document.querySelector("#app");
+
+// export const router = new Navigo('/');
+
+var header = (0, _header.getHeader)();
+var pageMain = (0, _pageMain.getPageMain)();
+var footer = (0, _footer.getFooter)();
+app.append(header, pageMain, footer);
+},{"./src/components/header/header.js":"src/components/header/header.js","./src/page/pageMain.js":"src/page/pageMain.js","./src/components/footer/footer.js":"src/components/footer/footer.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -144,7 +497,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39415" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35667" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
