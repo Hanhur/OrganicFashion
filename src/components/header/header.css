@@ -93,3 +93,25 @@
     }
 
 }
+@media (max-width: 375px)
+{
+    .navigator
+    {
+        display: none;
+    }
+    .organic_content-img
+    {
+        order: 1;
+        width: 195px;
+        padding-top: 50px;
+    }
+    .organic_box-title
+    {
+        font-size: 32px;
+        width: 280px;
+    }
+    .organic_box-text
+    {
+        width: 175px;
+    }
+}

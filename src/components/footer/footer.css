@@ -147,11 +147,61 @@
 
 @media (max-width: 375px)
 {
+    .footer
+    {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
     .follow-inner
     {
         display: flex;
         flex-direction: column;
+    }
+    .follow-content
+    {
+        display: flex;
         align-items: center;
+    }
+    .follow-title
+    {
+        font-size: 25px;
         margin: 0 auto;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .name-input,
+    .email_address-input
+    {
+        width: 257px;
+        height: 60px;
+    }
+    .message-input
+    {
+        width: 257px;
+        height: 130px;
+        margin-bottom: 30px;
+    }
+    .follow-btn
+    {
+        width: 257px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    .follow-img
+    {
+        width: 243px;
+        margin: 0 auto;
+    }
+    .footer::after
+    {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 645px;
+        left: 0;
+        width: 375px;
+        height: 245px;
+        background-color: var(--White2-color);
+        z-index: -1;
     }
 }

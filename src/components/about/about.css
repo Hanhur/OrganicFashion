@@ -17,7 +17,7 @@
 }
 .about-img--hidden
 {
-    display: none;
+    /* display: none; */
 }
 
 .about-title
@@ -94,13 +94,34 @@
         display: flex;
         flex-direction: column;
     }
+    .about-content
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .about-title
+    {
+        font-size: 20px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+    .about-text
+    {
+        width: 320px;
+    }
     .about-img
     {
         display: none;
     }
     .about-img--hidden
     {
+        margin-top: 30px;
         width: 198px;
         height: 250px;
+        margin-bottom: 30px;
     }
 }

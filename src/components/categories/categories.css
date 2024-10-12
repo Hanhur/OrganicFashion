@@ -58,8 +58,12 @@
 
 @media (max-width: 375px)
 {
+    .titles 
+    {
+        font-size: 20px;
+    }
     .categories_images-img
     {
-        width: 80px;
+        width: 78px;
     }
 }
