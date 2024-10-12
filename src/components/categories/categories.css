@@ -55,3 +55,11 @@
         width: 233px;
     }
 }
+
+@media (max-width: 375px)
+{
+    .categories_images-img
+    {
+        width: 80px;
+    }
+}

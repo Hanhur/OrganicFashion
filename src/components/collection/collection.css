@@ -94,3 +94,16 @@
         height: 380px;
     }
 }
+
+@media (max-width: 375px)
+{
+    .collection_new-img
+    {
+        width: 177px;
+    }
+    .section-collection::after
+    {
+        width: 785px;
+        height: 380px;
+    }
+}

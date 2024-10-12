@@ -15,6 +15,10 @@
 {
     width: 350px;
 }
+.about-img--hidden
+{
+    display: none;
+}
 
 .about-title
 {
@@ -80,5 +84,23 @@
     .about-btn
     {
         padding: 5px 10px;
+    }
+}
+
+@media (max-width: 375px)
+{
+    .about-inner
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .about-img
+    {
+        display: none;
+    }
+    .about-img--hidden
+    {
+        width: 198px;
+        height: 250px;
     }
 }
