@@ -107,8 +107,7 @@
     }
     .organic_box-title
     {
-        font-size: 32px;
-        width: 280px;
+        display: none;
     }
     .organic_box-text
     {
