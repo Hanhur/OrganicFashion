@@ -33,6 +33,10 @@ export function getHeader()
         items.appendChild(link);
     });
 
+    const titles = document.createElement("h1");
+    titles.classList.add("organic_box-titles");
+    titles.textContent = "ORGANIC FASHION";
+
     const organicContent = document.createElement("div");
     organicContent.classList.add("organic_content");
 
@@ -48,7 +52,6 @@ export function getHeader()
     title.classList.add("organic_box-title");
     title.textContent = "ORGANIC FASHION";
 
-
     const text = document.createElement("p");
     text.classList.add("organic_box-text");
     text.textContent = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
@@ -57,9 +60,8 @@ export function getHeader()
     button.classList.add("organic_box-btn");
     button.textContent = "SHOP NOW";
 
-
     header.append(container);
-    container.append(nav, organicContent);
+    container.append(nav, titles, organicContent);
 
     nav.append(list);
 

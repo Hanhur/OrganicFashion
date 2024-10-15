@@ -206,6 +206,9 @@ function getHeader() {
     list.appendChild(items);
     items.appendChild(link);
   });
+  var titles = document.createElement("h1");
+  titles.classList.add("organic_box-titles");
+  titles.textContent = "ORGANIC FASHION";
   var organicContent = document.createElement("div");
   organicContent.classList.add("organic_content");
   var img = document.createElement("img");
@@ -224,7 +227,7 @@ function getHeader() {
   button.classList.add("organic_box-btn");
   button.textContent = "SHOP NOW";
   header.append(container);
-  container.append(nav, organicContent);
+  container.append(nav, titles, organicContent);
   nav.append(list);
   organicContent.append(img, organicBox);
   organicBox.append(title, text, button);
@@ -501,7 +504,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44143" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45673" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
