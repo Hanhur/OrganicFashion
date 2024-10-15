@@ -95,6 +95,16 @@
 }
 @media (max-width: 375px)
 {
+    .organic_content
+    {
+        margin-top: 0;
+    }
+    .organic_box
+    {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+    }
     .navigator
     {
         display: none;
@@ -112,6 +122,14 @@
     .organic_box-text
     {
         width: 175px;
+    }
+    .organic_box-titles
+    {
+        font-size: 32px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        text-align: center;
+        margin-bottom: 17px;
     }
 }
 .section-categories
