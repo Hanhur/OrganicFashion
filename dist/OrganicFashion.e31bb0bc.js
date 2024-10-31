@@ -478,10 +478,10 @@ var app = document.querySelector("#app");
 
 // export const router = new Navigo('/');
 
-var header = (0, _header.getHeader)();
-var pageMain = (0, _pageMain.getPageMain)();
+// const header = getHeader();
+// const pageMain = getPageMain();
 var footer = (0, _footer.getFooter)();
-app.append(header, pageMain, footer);
+app.append(footer);
 },{"./src/components/header/header.js":"src/components/header/header.js","./src/page/pageMain.js":"src/page/pageMain.js","./src/components/footer/footer.js":"src/components/footer/footer.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -507,7 +507,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33017" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39669" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
