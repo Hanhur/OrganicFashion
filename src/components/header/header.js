@@ -4,10 +4,10 @@ import "./header.css";
 
 const navigationArray = ["ALTANSCHOOL WEB COURSES", "HOME", "ABOUT", "SHOP", "BLOG", "CONTACT"];
 
-function navigationArrayItems() 
-{
-    return navigationArray.filter((item) => item.length > 7);
-}
+// function navigationArrayItems() 
+// {
+//     return navigationArray.filter((item) => item.length > 7);
+// }
 
 export function getHeader() 
 {
@@ -38,10 +38,7 @@ export function getHeader()
 
         link.innerHTML = item;
     });
-    const titles = document.createElement("h1");
-    titles.classList.add("organic_box-titles");
-    titles.textContent = "ORGANIC FASHION";
-
+    
     const organicContent = document.createElement("div");
     organicContent.classList.add("organic_content");
 
@@ -66,7 +63,7 @@ export function getHeader()
     button.textContent = "SHOP NOW";
 
     header.append(container);
-    container.append(navigationArrayItems(), nav, titles, organicContent);
+    container.append(nav, organicContent);
 
     nav.append(list);
 
