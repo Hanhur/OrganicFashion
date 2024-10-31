@@ -4,11 +4,6 @@ import "./header.css";
 
 const navigationArray = ["ALTANSCHOOL WEB COURSES", "HOME", "ABOUT", "SHOP", "BLOG", "CONTACT"];
 
-// function navigationArrayItems() 
-// {
-//     return navigationArray.filter((item) => item.length > 7);
-// }
-
 export function getHeader() 
 {
     const header = document.createElement("header");
@@ -22,7 +17,6 @@ export function getHeader()
 
     const list = document.createElement("ul");
     list.classList.add("list");
-
 
     navigationArray.forEach(function (item) 
     {
@@ -38,7 +32,7 @@ export function getHeader()
 
         link.innerHTML = item;
     });
-    
+
     const organicContent = document.createElement("div");
     organicContent.classList.add("organic_content");
 
