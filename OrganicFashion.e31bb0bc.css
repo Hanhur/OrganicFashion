@@ -420,6 +420,7 @@
 {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .follow-content
@@ -433,14 +434,17 @@
 {
     text-align: left;
     font-size: 48px;
+    letter-spacing: 1.5px;
     font-weight: 700;
-    margin-bottom: 50px;
+    margin-bottom: 62px;
 }
 
 .follow-form
 {
     display: flex;
     flex-direction: column;
+    gap: 15px 0;
+    margin-bottom: 75px;
 }
 
 .name-input,
@@ -448,8 +452,7 @@
 .email_address-input
 {
     border: 3px solid var(--Similar-color);
-    border-radius: 5px;
-    margin-bottom: 10px;
+    border-radius: 10px;
     resize: none;
     padding: 5px;
 }
@@ -479,14 +482,16 @@
 
 .follow-btn
 {
+    font-size: 18px;
+    letter-spacing: 1.5px;
     text-align: center;
     color: var(--White-color);
     background-color: var(--Similar-color);
     margin: 0 auto;
     display: block;
     margin-left: 0;
-    padding: 10px 50px;
-    border-radius: 5px;
+    padding: 15px 50px;
+    border-radius: 10px;
     margin-top: 40px;
 }
 
@@ -495,52 +500,84 @@
     width: 450px;
 }
 
-@media (max-width: 1366px)
+@media screen and (max-width: 1366px)
 {
-    .footer::after
+    .follow-inner
     {
-        width: 470px;
-        height: 780px;
+        gap: 62px 0;
+    }
+    .follow-title
+    {
+        margin-bottom: 33px;
+    }
+    .follow-form
+    {
+        gap: 10px 0;
+        margin-bottom: 40px;
+    }
+    .name-input,
+    .email_address-input
+    {
+        width: 560px;
+        height: 60px;
     }
 
+    .message-input
+    {
+        width: 560px;
+        height: 130px;
+    }
+    .footer::after
+    {
+        width: 415px;
+        height: 836px;
+    }
+    .follow-img
+    {
+        width: 440px;
+    }
+}
+
+@media screen and (max-width: 1100px)
+{
+    .follow-inner
+    {
+        gap: 50px 0;
+    }
     .follow-title
     {
         font-size: 32px;
-        margin-bottom: 30px;
-    }
-
-    .follow-img
-    {
-        width: 400px;
-    }
-}
-
-@media (max-width: 992px)
-{
-    .footer::after
-    {
-        width: 315px;
-        height: 625px;
-    }
-
-    .follow-title
-    {
+        margin-bottom: 25px;
         margin-left: 0;
     }
-
+    .follow-form
+    {
+        gap: 7px 0;
+        margin-bottom: 30px;
+    }
+    .name-input,
+    .email_address-input
+    {
+        width: 436px;
+        height: 60px;
+    }
+    .message-input
+    {
+        width: 436px;
+        height: 100px;
+    }
+    .footer::after
+    {
+        width: 280px;
+        height: 625px;
+    }
     .follow-img
     {
-        width: 300px;
-    }
-
-    .follow-btn
-    {
-        width: 100%;
-        margin-top: 30px;
+        width: 300px; 
     }
 }
 
-@media (max-width: 375px)
+@media screen and (max-width: 830px)
 {
     .footer
     {
@@ -564,6 +601,107 @@
         text-align: center;
         margin-bottom: 30px;
     }
+    .follow-form
+    {
+        gap: 9px 0;
+        margin-bottom: 50px;
+    }
+    .name-input,
+    .email_address-input
+    {
+        width: 400px;
+        height: 60px;
+    }
+    .message-input
+    {
+        width: 400px;
+        height: 130px;
+    }
+    .follow-btn
+    {
+        width: 350px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    .follow-img
+    {
+        width: 400px;
+        margin: 0 auto;
+    }
+    .footer::after
+    {
+        top: 755px;
+        left: 0;
+        width: 830px;
+        height: 500px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 530px)
+{
+    .name-input,
+    .email_address-input
+    {
+        width: 340px;
+        height: 60px;
+    }
+    .message-input
+    {
+        width: 340px;
+        height: 130px;
+        margin-bottom: 30px;
+    }
+    .follow-btn
+    {
+        width: 257px;
+        margin: 0 auto;
+        margin-bottom: 65px;
+    }
+    .follow-img
+    {
+        width: 300px;
+        margin: 0 auto;
+    }
+    .footer::after
+    {
+        top: 735px;
+        left: 0;
+        width: 375px;
+        height: 360px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 375px)
+{
+    .footer
+    {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .follow-inner
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .follow-content
+    {
+        display: flex;
+        align-items: center;
+    }
+    .follow-title
+    {
+        font-size: 20px;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 33px;
+    }
+    .follow-form
+    {
+        gap: 9px 0;
+        margin-bottom: 40px;
+    }
     .name-input,
     .email_address-input
     {
@@ -580,7 +718,7 @@
     {
         width: 257px;
         margin: 0 auto;
-        margin-bottom: 50px;
+        margin-bottom: 65px;
     }
     .follow-img
     {
@@ -589,15 +727,11 @@
     }
     .footer::after
     {
-        content: '';
-        position: absolute;
-        display: block;
-        top: 645px;
+        top: 705px;
         left: 0;
         width: 375px;
-        height: 245px;
-        background-color: var(--White2-color);
-        z-index: -1;
+        height: 300px;
+        width: 100%;
     }
 }
 
