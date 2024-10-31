@@ -187,12 +187,6 @@ function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e
 // import { router } from "../../index.js";
 
 var navigationArray = ["ALTANSCHOOL WEB COURSES", "HOME", "ABOUT", "SHOP", "BLOG", "CONTACT"];
-
-// function navigationArrayItems() 
-// {
-//     return navigationArray.filter((item) => item.length > 7);
-// }
-
 function getHeader() {
   var header = document.createElement("header");
   header.classList.add("header");
@@ -478,10 +472,11 @@ var app = document.querySelector("#app");
 
 // export const router = new Navigo('/');
 
-// const header = getHeader();
+var header = (0, _header.getHeader)();
 // const pageMain = getPageMain();
-var footer = (0, _footer.getFooter)();
-app.append(footer);
+// const footer = getFooter();
+
+app.append(header);
 },{"./src/components/header/header.js":"src/components/header/header.js","./src/page/pageMain.js":"src/page/pageMain.js","./src/components/footer/footer.js":"src/components/footer/footer.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -507,7 +502,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39669" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35027" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
