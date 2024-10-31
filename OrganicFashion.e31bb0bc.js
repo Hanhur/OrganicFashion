@@ -187,6 +187,12 @@ function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e
 // import { router } from "../../index.js";
 
 var navigationArray = ["ALTANSCHOOL WEB COURSES", "HOME", "ABOUT", "SHOP", "BLOG", "CONTACT"];
+
+// function navigationArrayItems() 
+// {
+//     return navigationArray.filter((item) => item.length > 7);
+// }
+
 function getHeader() {
   var header = document.createElement("header");
   header.classList.add("header");
@@ -202,13 +208,10 @@ function getHeader() {
     var link = document.createElement("a");
     link.classList.add("link");
     link.href = "/";
-    link.innerHTML = item;
     list.appendChild(items);
     items.appendChild(link);
+    link.innerHTML = item;
   });
-  var titles = document.createElement("h1");
-  titles.classList.add("organic_box-titles");
-  titles.textContent = "ORGANIC FASHION";
   var organicContent = document.createElement("div");
   organicContent.classList.add("organic_content");
   var img = document.createElement("img");
@@ -227,7 +230,7 @@ function getHeader() {
   button.classList.add("organic_box-btn");
   button.textContent = "SHOP NOW";
   header.append(container);
-  container.append(nav, titles, organicContent);
+  container.append(nav, organicContent);
   nav.append(list);
   organicContent.append(img, organicBox);
   organicBox.append(title, text, button);
@@ -504,7 +507,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45673" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33017" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
