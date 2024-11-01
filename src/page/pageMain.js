@@ -7,8 +7,8 @@ export function getPageMain()
     const main = document.createElement("main");
     main.classList.add("main");
 
-    main.append(getPageCategories());
-    // main.append(getPageCollection());
+    // main.append(getPageCategories());
+    main.append(getPageCollection());
     // main.append(getPageAbout());
 
     return main;

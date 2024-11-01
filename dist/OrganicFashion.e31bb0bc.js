@@ -401,8 +401,9 @@ var _pageAbout = require("../components/about/pageAbout.js");
 function getPageMain() {
   var main = document.createElement("main");
   main.classList.add("main");
-  main.append((0, _pageCategories.getPageCategories)());
-  // main.append(getPageCollection());
+
+  // main.append(getPageCategories());
+  main.append((0, _pageCollection.getPageCollection)());
   // main.append(getPageAbout());
 
   return main;
@@ -503,7 +504,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44113" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33757" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
