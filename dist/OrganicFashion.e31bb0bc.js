@@ -402,8 +402,9 @@ function getPageMain() {
   var main = document.createElement("main");
   main.classList.add("main");
   main.append((0, _pageCategories.getPageCategories)());
-  main.append((0, _pageCollection.getPageCollection)());
-  main.append((0, _pageAbout.getPageAbout)());
+  // main.append(getPageCollection());
+  // main.append(getPageAbout());
+
   return main;
 }
 },{"../components/categories/pageCategories.js":"src/components/categories/pageCategories.js","../components/collection/pageCollection.js":"src/components/collection/pageCollection.js","../components/about/pageAbout.js":"src/components/about/pageAbout.js"}],"src/img/follow.png":[function(require,module,exports) {
@@ -472,11 +473,11 @@ var app = document.querySelector("#app");
 
 // export const router = new Navigo('/');
 
-var header = (0, _header.getHeader)();
-// const pageMain = getPageMain();
+// const header = getHeader();
+var pageMain = (0, _pageMain.getPageMain)();
 // const footer = getFooter();
 
-app.append(header);
+app.append(pageMain);
 },{"./src/components/header/header.js":"src/components/header/header.js","./src/page/pageMain.js":"src/page/pageMain.js","./src/components/footer/footer.js":"src/components/footer/footer.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -502,7 +503,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35027" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "32901" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -8,9 +8,9 @@ const app = document.querySelector("#app");
 
 // export const router = new Navigo('/');
 
-const header = getHeader();
-// const pageMain = getPageMain();
+// const header = getHeader();
+const pageMain = getPageMain();
 // const footer = getFooter();
 
 
-app.append(header);
+app.append(pageMain);

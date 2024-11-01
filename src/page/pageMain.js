@@ -8,8 +8,8 @@ export function getPageMain()
     main.classList.add("main");
 
     main.append(getPageCategories());
-    main.append(getPageCollection());
-    main.append(getPageAbout());
+    // main.append(getPageCollection());
+    // main.append(getPageAbout());
 
     return main;
 }
