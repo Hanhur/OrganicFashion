@@ -230,11 +230,7 @@ function getHeader() {
   organicBox.append(title, text, button);
   return header;
 }
-},{"../../img/image-1.png":"src/img/image-1.png","./header.css":"src/components/header/header.css"}],"src/components/categories/categories.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/img/categories/image-1.png":[function(require,module,exports) {
+},{"../../img/image-1.png":"src/img/image-1.png","./header.css":"src/components/header/header.css"}],"src/img/categories/image-1.png":[function(require,module,exports) {
 module.exports = "/image-1.6c7b8715.png";
 },{}],"src/img/categories/image-2.png":[function(require,module,exports) {
 module.exports = "/image-2.1b30d680.png";
@@ -244,19 +240,23 @@ module.exports = "/image-3.3ecc05cc.png";
 module.exports = "/image-4.19638b92.png";
 },{}],"src/img/categories/image-5.png":[function(require,module,exports) {
 module.exports = "/image-5.3f5bbde0.png";
-},{}],"src/components/categories/pageCategories.js":[function(require,module,exports) {
+},{}],"src/components/categories/categories.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/categories/pageCategories.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.getPageCategories = getPageCategories;
-require("./categories.css");
 var _image = _interopRequireDefault(require("../../img/categories/image-1.png"));
 var _image2 = _interopRequireDefault(require("../../img/categories/image-2.png"));
 var _image3 = _interopRequireDefault(require("../../img/categories/image-3.png"));
 var _image4 = _interopRequireDefault(require("../../img/categories/image-4.png"));
 var _image5 = _interopRequireDefault(require("../../img/categories/image-5.png"));
+require("./categories.css");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 var categoriesArray = [_image.default, _image2.default, _image3.default, _image4.default];
 function getPageCategories() {
@@ -290,27 +290,27 @@ function getPageCategories() {
   categories_shop_images.append(categories_images, img);
   return section;
 }
-},{"./categories.css":"src/components/categories/categories.css","../../img/categories/image-1.png":"src/img/categories/image-1.png","../../img/categories/image-2.png":"src/img/categories/image-2.png","../../img/categories/image-3.png":"src/img/categories/image-3.png","../../img/categories/image-4.png":"src/img/categories/image-4.png","../../img/categories/image-5.png":"src/img/categories/image-5.png"}],"src/components/collection/collection.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/img/collection/image-1.png":[function(require,module,exports) {
+},{"../../img/categories/image-1.png":"src/img/categories/image-1.png","../../img/categories/image-2.png":"src/img/categories/image-2.png","../../img/categories/image-3.png":"src/img/categories/image-3.png","../../img/categories/image-4.png":"src/img/categories/image-4.png","../../img/categories/image-5.png":"src/img/categories/image-5.png","./categories.css":"src/components/categories/categories.css"}],"src/img/collection/image-1.png":[function(require,module,exports) {
 module.exports = "/image-1.4ddedca7.png";
 },{}],"src/img/collection/image-2.png":[function(require,module,exports) {
 module.exports = "/image-2.e03b7fba.png";
 },{}],"src/img/collection/image-3.png":[function(require,module,exports) {
 module.exports = "/image-3.3d02050e.png";
-},{}],"src/components/collection/pageCollection.js":[function(require,module,exports) {
+},{}],"src/components/collection/collection.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/collection/pageCollection.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.getPageCollection = getPageCollection;
-require("./collection.css");
 var _image = _interopRequireDefault(require("../../img/collection/image-1.png"));
 var _image2 = _interopRequireDefault(require("../../img/collection/image-2.png"));
 var _image3 = _interopRequireDefault(require("../../img/collection/image-3.png"));
+require("./collection.css");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 var collectionArray = [_image.default, _image2.default, _image3.default];
 function getPageCollection() {
@@ -337,21 +337,21 @@ function getPageCollection() {
   container.append(title, collectionNew, text);
   return section;
 }
-},{"./collection.css":"src/components/collection/collection.css","../../img/collection/image-1.png":"src/img/collection/image-1.png","../../img/collection/image-2.png":"src/img/collection/image-2.png","../../img/collection/image-3.png":"src/img/collection/image-3.png"}],"src/components/about/about.css":[function(require,module,exports) {
+},{"../../img/collection/image-1.png":"src/img/collection/image-1.png","../../img/collection/image-2.png":"src/img/collection/image-2.png","../../img/collection/image-3.png":"src/img/collection/image-3.png","./collection.css":"src/components/collection/collection.css"}],"src/img/about.png":[function(require,module,exports) {
+module.exports = "/about.09a40596.png";
+},{}],"src/components/about/about.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/img/about.png":[function(require,module,exports) {
-module.exports = "/about.09a40596.png";
-},{}],"src/components/about/pageAbout.js":[function(require,module,exports) {
+},{"./../../img/about.png":[["about.09a40596.png","src/img/about.png"],"src/img/about.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/about/pageAbout.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.getPageAbout = getPageAbout;
+var _about = _interopRequireDefault(require("../../img/about.png"));
 require("./about.css");
-var _about2 = _interopRequireDefault(require("../../img/about.png"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 function getPageAbout() {
   var section = document.createElement("section");
@@ -362,7 +362,7 @@ function getPageAbout() {
   about_inner.classList.add("about-inner");
   var img = document.createElement("img");
   img.classList.add("about-img");
-  img.src = _about2.default;
+  img.src = _about.default;
   img.alt = "Example image";
   var aboutContent = document.createElement("div");
   aboutContent.classList.add("about-content");
@@ -372,10 +372,6 @@ function getPageAbout() {
   var text1 = document.createElement("p");
   text1.classList.add("about-text", "text");
   text1.textContent = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
-  var images = document.createElement("img");
-  images.classList.add("about-img--hidden");
-  images.src = _about2.default;
-  images.alt = "Example image";
   var text2 = document.createElement("p");
   text2.classList.add("about-text");
   text2.textContent = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
@@ -385,10 +381,10 @@ function getPageAbout() {
   section.append(container);
   container.append(about_inner);
   about_inner.append(img, aboutContent);
-  aboutContent.append(title, text1, images, text2, button);
+  aboutContent.append(title, text1, text2, button);
   return section;
 }
-},{"./about.css":"src/components/about/about.css","../../img/about.png":"src/img/about.png"}],"src/page/pageMain.js":[function(require,module,exports) {
+},{"../../img/about.png":"src/img/about.png","./about.css":"src/components/about/about.css"}],"src/page/pageMain.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -403,9 +399,8 @@ function getPageMain() {
   main.classList.add("main");
 
   // main.append(getPageCategories());
-  main.append((0, _pageCollection.getPageCollection)());
-  // main.append(getPageAbout());
-
+  // main.append(getPageCollection());
+  main.append((0, _pageAbout.getPageAbout)());
   return main;
 }
 },{"../components/categories/pageCategories.js":"src/components/categories/pageCategories.js","../components/collection/pageCollection.js":"src/components/collection/pageCollection.js","../components/about/pageAbout.js":"src/components/about/pageAbout.js"}],"src/img/follow.png":[function(require,module,exports) {
@@ -504,7 +499,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33757" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43743" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -1,9 +1,9 @@
-import "./categories.css";
 import images01Img from "../../img/categories/image-1.png";
 import images02Img from "../../img/categories/image-2.png";
 import images03Img from "../../img/categories/image-3.png";
 import images04Img from "../../img/categories/image-4.png";
 import images05Img from "../../img/categories/image-5.png";
+import "./categories.css";
 
 const categoriesArray = [images01Img, images02Img, images03Img, images04Img];
 

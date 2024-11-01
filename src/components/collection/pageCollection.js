@@ -1,7 +1,7 @@
-import "./collection.css";
 import images01Img from "../../img/collection/image-1.png";
 import images02Img from "../../img/collection/image-2.png";
 import images03Img from "../../img/collection/image-3.png";
+import "./collection.css";
 
 const collectionArray = [images01Img, images02Img, images03Img];
 

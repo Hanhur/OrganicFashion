@@ -1,5 +1,5 @@
-import "./about.css";
 import aboutImg from "../../img/about.png";
+import "./about.css";
 
 export function getPageAbout()
 {
@@ -28,11 +28,6 @@ export function getPageAbout()
     text1.classList.add("about-text", "text");
     text1.textContent = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
 
-    const images = document.createElement("img");
-    images.classList.add("about-img--hidden");
-    images.src = aboutImg;
-    images.alt = "Example image";
-
     const text2 = document.createElement("p");
     text2.classList.add("about-text");
     text2.textContent = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
@@ -44,7 +39,7 @@ export function getPageAbout()
     section.append(container);
     container.append(about_inner);
     about_inner.append(img, aboutContent);
-    aboutContent.append(title, text1, images, text2, button);
+    aboutContent.append(title, text1, text2, button);
 
     return section;
 }
